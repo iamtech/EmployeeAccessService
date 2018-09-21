@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: employee-microservice-client
+  mvc:
+    view:
+      prefix: /WEB-INF/
+      suffix: .jsp
+
+# Discovery Server Access
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8095/eureka/
+
+# Disable Spring Boot's "Whitelabel" default error page, so we can use our own
+error:
+  whitelabel:
+    enabled:  false
