@@ -3,9 +3,12 @@ spring:
     name: employee-microservice-client
   mvc:
     view:
-      prefix: /WEB-INF/
+      prefix: /WEB-INF/jsp/
       suffix: .jsp
 
+server:
+  port: 8099
+  
 # Discovery Server Access
 eureka:
   client:

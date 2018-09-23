@@ -11,8 +11,8 @@ import com.client.app.service.bean.EmployeeBean;
 
 public class EmployeeRepositoryAccessImpl implements EmployeeRepositoryAccess{
 
-	
-	protected RestTemplate restTemplate = new RestTemplate();
+	@Autowired
+	protected RestTemplate restTemplate;
 	
 	protected String serviceUrl;
 	

@@ -5,11 +5,11 @@
 </head>
 
 <body>
-	<h1 style="color: red">jCombat Demo - Microservices with Spring Boot</h1>
+	<h1 style="color: red">Index Page</h1>
 	<div class="container">
 		<div class="row">
-			<h2>Profiles List</h2>
-			<p><a href="/userProfiles">View Profiles List</a></p>
+			<h2>Employee List</h2>
+			<p><a href="/userProfiles">View Employee List</a></p>
 		</div>
 	</div>
 </body>
