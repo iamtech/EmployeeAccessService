@@ -6,6 +6,7 @@ spring:
       prefix: /WEB-INF/jsp/
       suffix: .jsp
 
+      
 server:
   port: 8099
   
@@ -19,3 +20,5 @@ eureka:
 error:
   whitelabel:
     enabled:  false
+    
+    

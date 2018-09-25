@@ -9,12 +9,13 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.client.RestTemplate;
 
 import com.client.app.service.controller.EmployeeClientController;
+import com.client.app.service.controller.MessageFromConfig;
 import com.client.app.service.repository.EmployeeRepositoryAccess;
 import com.client.app.service.repository.EmployeeRepositoryAccessImpl;
 
 @EnableDiscoveryClient
 @SpringBootApplication(scanBasePackages={"client.app.service"})
-@ComponentScan(basePackageClasses = EmployeeClientController.class, basePackages="client.app.service")
+@ComponentScan(basePackageClasses = {EmployeeClientController.class,MessageFromConfig.class}, basePackages="client.app.service")
 public class EmployeeAccessServiceApplication {
 	
 	public static final String EMPLOYEE_DATA_SERVICE_URL = "http://employee-microservice-dataset";
