@@ -59,6 +59,12 @@
 		   <artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
 		
+		<!-- To enable circuit beak / Fallback -->	
+		<dependency>
+		    <groupId>org.springframework.cloud</groupId>
+		    <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+		</dependency>
+		
 		<!-- For JSP pages -->
 		<dependency>
 		   <groupId>org.apache.tomcat.embed</groupId>

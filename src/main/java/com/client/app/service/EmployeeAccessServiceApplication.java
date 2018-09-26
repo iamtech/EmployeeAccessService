@@ -2,6 +2,7 @@ package com.client.app.service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
@@ -13,6 +14,7 @@ import com.client.app.service.controller.MessageFromConfig;
 import com.client.app.service.repository.EmployeeRepositoryAccess;
 import com.client.app.service.repository.EmployeeRepositoryAccessImpl;
 
+@EnableCircuitBreaker
 @EnableDiscoveryClient
 @SpringBootApplication(scanBasePackages={"client.app.service"})
 @ComponentScan(basePackageClasses = {EmployeeClientController.class,MessageFromConfig.class}, basePackages="client.app.service")
