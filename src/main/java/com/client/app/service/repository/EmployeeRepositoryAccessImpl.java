@@ -4,15 +4,25 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
+import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 import com.client.app.service.bean.EmployeeBean;
+import com.client.app.service.config.UserRibbonConfig;
 
+@RibbonClient(name = "employee-microservice-dataset", configuration = UserRibbonConfig.class)
 public class EmployeeRepositoryAccessImpl implements EmployeeRepositoryAccess{
 
-	@Autowired
-	protected RestTemplate restTemplate;
+	@LoadBalanced
+    @Bean
+    RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
+	
+    @Autowired
+    RestTemplate restTemplate;
 	
 	protected String serviceUrl;
 	
